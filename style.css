@@ -584,6 +584,12 @@ form label {
   transform: scale(1.1);
   opacity: 1;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  /*stuff here*/
+  background-color: red;
+}
+
 .single-product .right-side {
 }
 @media screen and (min-width: 1440px) {

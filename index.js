@@ -99,7 +99,7 @@ async function API() {
   return data;
 }
 
-API();
+//API();
 
 let newArrivals1 = GetElement(".new-arrivals1");
 let newArrivals2 = GetElement(".new-arrivals2");
@@ -112,7 +112,7 @@ DynamicStaticToprateddata2(toprateddata2, GetElement(".top-rated2"));
 DynamicStaticTrendingdata(trendingdata1, GetElement(".trending1"));
 DynamicStaticTrendingdata2(trendingdata2, GetElement(".trending2"));
 DynamicSellerdata(sellerproductsdata, GetElement(".seller-data"));
-DynamicStaticReviewsdata(reviewsdata, GetElement(".reviews-container"));
+//DynamicStaticReviewsdata(reviewsdata, GetElement(".reviews-container"));
 // DynamicSellerdata(sellerproductsdata, GetElement(".seller-box-container"));
 
 // function perimeter(length, width) {

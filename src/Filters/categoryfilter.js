@@ -11,7 +11,7 @@ let Dynamicbtns = [
 console.log(Dynamicbtns);
 
 BtnContainer.innerHTML = Dynamicbtns.map((Dynamicbtn) => {
-  return `<button data-id=${Dynamicbtn} class="hover:text-og-red text-black font-medium dark:text-white">${Dynamicbtn}</button>`;
+  return `<button data-id=${Dynamicbtn} class="hover:text-og-red text-black font-medium font-DM dark:text-white">${Dynamicbtn}</button>`;
 }).join(" ");
 
 BtnContainer.addEventListener("click", (e) => {
