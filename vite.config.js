@@ -9,7 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         products: resolve(__dirname, "Products.html"),
         singleproduct: resolve(__dirname, "SingleProduct.html"),
-        about: resolve(__dirname, "Contact.html"),
+        about: resolve(__dirname, "About.html"),
       },
     },
   },
