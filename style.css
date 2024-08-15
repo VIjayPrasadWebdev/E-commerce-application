@@ -647,6 +647,10 @@ input[type="range"]::-webkit-slider-thumb {
     gap: 1rem;
     width: 100%;
   }
+
+  .active {
+    color: red;
+  }
 }
 
 @media screen and (min-width: 1111px) {
@@ -1079,6 +1083,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
   }
   .gallery-pic {
     display: flex;

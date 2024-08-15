@@ -1,17 +1,80 @@
 import "/src/navbarToggle.js";
 import "../mode.js";
-import GetElement from "../util";
+import GetElement, { GetElements } from "../util";
 import productsData from "../Data/productsdata";
 import { producttocart } from "../navbarToggle";
 import { Addtocart } from "../Cart/Addtocart.js";
 import { Store } from "../Data/store.js";
 //console.log(productsData);
+import { Notyf } from "notyf";
 let { id, img, price, productname } = Store;
 //let SingleProductContainer = GetElement(".single-product-container");
 let URLID = window.location.search.split("?id=").join(" ");
 let updatedURLID = Number(URLID);
 let singleProductURL = `${window.location.href}`;
+import "../Data/DynamicData/DynamicSellerdata.js";
+import { DynamicSellerdata } from "../Data/DynamicData/DynamicSellerdata.js";
+import sellerproductsdata from "../Data/sellerdata.js";
+let Special2024Lg = GetElement(".dropdown-container2");
+let Special2024sm = GetElement(".mobile-special-dropdown");
+let SettingsLg = GetElement(".dropdown-container3");
+let Settingsm = GetElement(".mobile-settings-dropdown");
+let categorySvgicon = GetElements(".category-dashboard-links svg");
+Special2024Lg.addEventListener("click", (e) => {
+  PageConstruction(e);
+  e.preventDefault();
+  alert("This page is under construction");
+});
+Special2024sm.addEventListener("click", (e) => {
+  e.preventDefault();
+  PageConstruction(e);
+  alert("This page is under construction");
+});
+SettingsLg.addEventListener("click", (e) => {
+  e.preventDefault();
+  PageConstruction(e);
+  alert("This page is under construction");
+});
+Settingsm.addEventListener("click", (e) => {
+  e.preventDefault();
+  PageConstruction(e);
+  alert("This page is under construction");
+});
 
+categorySvgicon.forEach((svgicon) => {
+  svgicon.addEventListener("click", (e) => {
+    PageConstruction(e);
+    alert("This page is under construction");
+  });
+});
+function PageConstruction(e) {
+  e.preventDefault();
+
+  // Create an instance of Notyf
+  const notyf = new Notyf({
+    duration: 1000,
+    position: {
+      x: "center",
+      y: "top",
+    },
+    types: [
+      {
+        type: "error",
+        background: "#f59e0b",
+        color: "black",
+        duration: 2000,
+        className: "material-icons toast",
+        tagName: "",
+        dismissible: true,
+      },
+    ],
+  });
+
+  // Display an error notification
+  notyf.error("This page is under construction");
+}
+
+DynamicSellerdata(sellerproductsdata, GetElement(".seller-data"));
 if (singleProductURL.endsWith(URLID)) {
   console.log("Batman");
 }
@@ -41,7 +104,7 @@ function SingleProduct(element, Store) {
     </div>
     <div class="right-side flex flex-col justify-between w-full h-full p-6 gap-4">
         <div class="name-data flex flex-col gap-3">
-            <p class="product-title  font-medium text-3xl text-black dark:text-white">${productname}</p>
+            <p class="product-title  font-medium text-3xl text-black dark:text-white font-DM">${productname}</p>
         
     
               <div class="price-data flex items-center gap-3">

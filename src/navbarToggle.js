@@ -1,5 +1,4 @@
-import GetElement from "./util.js";
-
+import GetElement, { GetElements } from "./util.js";
 let hamburgerbtn = GetElement(".hamburger-btn");
 // let hamburgerClose = GetElement(".mobile-hamburger-close-btn");
 let menulinks = GetElement(".menu-links");
@@ -103,7 +102,7 @@ let settings = GetElement(".mobile-settings-dropdown");
 plusicon.classList.add("addplusicon");
 let Mobilemenulinks = GetElement(".menu-links");
 Mobilecategoriescontainer.addEventListener("click", (e) => {
-  e.preventDefault();
+  //  e.preventDefault();
   let ParentElement = e.target.parentElement;
   let Element = e.target;
   console.log(ParentElement);
@@ -132,7 +131,7 @@ Mobilecategoriescontainer.addEventListener("click", (e) => {
   }
 });
 Mobilespecialcontainer.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   let ParentElement = e.target.parentElement;
   let Element = e.target;
   console.log(ParentElement);
@@ -157,7 +156,7 @@ Mobilespecialcontainer.addEventListener("click", (e) => {
   }
 });
 Mobilesettingscontainer.addEventListener("click", (e) => {
-  e.preventDefault();
+  //  e.preventDefault();
   let ParentElement = e.target.parentElement;
   let Element = e.target;
   console.log(ParentElement);
@@ -181,33 +180,9 @@ Mobilesettingscontainer.addEventListener("click", (e) => {
     }
   }
 });
-Mobilesettingscontainer.addEventListener("click", (e) => {
-  e.preventDefault();
-  let ParentElement = e.target.parentElement;
-  let Element = e.target;
-  console.log(ParentElement);
 
-  //ParentElement.classList.add("addplusicon");
-  if (ParentElement.classList.contains("plus-icon-btn")) {
-    // console.log("Hooooooooooooy");
-
-    if (ParentElement.classList.contains("addplusicon")) {
-      ParentElement.classList.remove("addplusicon");
-      ParentElement.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" /> </svg>`;
-      dropdownMobileNav5.classList.add("active3");
-    } else {
-      ParentElement.classList.add("addplusicon");
-      ParentElement.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-
-          </svg>`;
-      dropdownMobileNav5.classList.remove("active3");
-    }
-  }
-});
 Mobileoptioncontainer.addEventListener("click", (e) => {
-  e.preventDefault();
+  //  e.preventDefault();
   let ParentElement = e.target.parentElement;
   let Element = e.target;
   console.log(ParentElement);
