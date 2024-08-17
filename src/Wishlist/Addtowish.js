@@ -11,6 +11,7 @@ let wishBadge = GetElements(".wish-badge");
 let cartTotalPrice = GetElements(".checkout-price");
 let wishLayoutcontainer = GetElement(".wish-data-layout");
 let wishLayoutcontainerlg = GetElement(".wish-box-layout-lg");
+let wishcartBtn = GetElements(".wish-cart-btn");
 // let wishMajorButtonsLg = GetElement(".wish-major-buttons-container-lg");
 let wish = GetLocalStorage("wish");
 export function Addtowish(id) {
@@ -83,6 +84,23 @@ function SetupwishFuntionality() {
 
   SetLocalStorage("wish", wish);
 }
+function Wishclearcart() {
+  wishcartBtn.forEach((wishcartBtn) => {
+    wishcartBtn.addEventListener("click", () => {
+      // console.log(cartLayoutcontainer);
+
+      // cartLayoutcontainer.SiblingElement.remove();
+
+      alert("Wishlist is Empty");
+      alert("Please reload the page");
+      // cart = [];
+      wish = [];
+    });
+  });
+  wish = [];
+  // cart = [];
+}
+Wishclearcart();
 
 function init() {
   Badgecount();

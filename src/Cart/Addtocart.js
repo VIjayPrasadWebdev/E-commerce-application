@@ -140,6 +140,7 @@ function SetupCartFuntionality() {
     if (element.classList.contains(".clear-cart-btn")) {
       RemoveItem(parentID);
     }
+
     Badgecount();
     TotalPricecount();
     SetLocalStorage("cart", cart);
@@ -181,6 +182,7 @@ function SetupCartFuntionality() {
 
     Badgecount();
     TotalPricecount();
+    clearcart();
     SetLocalStorage("cart", cart);
   });
 
@@ -208,10 +210,12 @@ function RemoveItem(id) {
 function clearcart() {
   clearcartBtn.forEach((clearcartBtn) => {
     clearcartBtn.addEventListener("click", () => {
-      console.log(cartLayoutcontainer);
+      // console.log(cartLayoutcontainer);
 
-      cartLayoutcontainer.SiblingElement.remove();
-
+      // cartLayoutcontainer.SiblingElement.remove();
+      cart = [];
+      alert("Cart is Empty");
+      alert("Please reload the page");
       // cart = [];
     });
   });
