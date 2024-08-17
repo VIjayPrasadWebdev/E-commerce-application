@@ -37,7 +37,7 @@ let Special2024sm = GetElement(".mobile-special-dropdown");
 let SettingsLg = GetElement(".dropdown-container3");
 let Settingsm = GetElement(".mobile-settings-dropdown");
 let categorySvgicon = GetElements(".category-dashboard-links svg");
-
+/*
 NavbarlinkLg.forEach((link) => {
   if (link.href === window.location.href) {
     link.classList.add("active");
@@ -48,6 +48,7 @@ Navbarlinksm.forEach((link) => {
     link.classList.add("active");
   }
 });
+*/
 
 Special2024Lg.addEventListener("click", (e) => {
   PageConstruction(e);
