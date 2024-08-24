@@ -589,6 +589,12 @@ input[type="range"]::-webkit-slider-thumb {
   /*stuff here*/
   background-color: red;
 }
+.dropdown-mobile-container a {
+  color: black;
+}
+.dropdown-mobile-container a:hover {
+  color: red;
+}
 
 .single-product .right-side {
 }
@@ -649,7 +655,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .active {
-    color: red;
+    /* color: red; */
   }
 }
 
